@@ -373,7 +373,7 @@ Resources:
     Properties:
       TemplateURL:
         !Sub
-          - 'https://raw.githubusercontent.com/chintan-synapse/tmds/master/dsdatabaseabstract.yml'
+          - 'https://raw.githubusercontent.com/chintan-synapse/tmds/master/dsdatabaseabstract.template'
           - S3Region: !If [UsingDefaultBucket, !Ref 'AWS::Region', !Ref QSS3BucketRegion]
             S3Bucket: !If [UsingDefaultBucket, !Sub '${QSS3BucketName}-${AWS::Region}', !Ref QSS3BucketName]
       Parameters:
